@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+
+.title {
+    @apply 
+        mb-2 
+        text-4xl 
+        font-extrabold 
+        tracking-tight 
+        text-slate-100 
+        sm:text-5xl;
+}
+
+.logo-div {
+    @apply 
+        relative 
+        aspect-square 
+        w-full 
+        max-w-[320px] 
+        overflow-hidden 
+        rounded-2xl 
+        border 
+        border-slate-700/50 
+        shadow-2xl 
+        transition-transform 
+        hover:scale-[1.01] 
+        sm:max-w-[380px];
+}
+
+.logo {
+     @apply 
+        h-full 
+        w-full 
+        object-cover;
+}
+
+.link {
+ @apply  
+    mt-4 
+    w-full 
+    max-w-[280px] 
+    rounded-xl 
+    bg-emerald-600 
+    px-6 py-4 
+    text-center 
+    text-lg 
+    font-bold 
+    text-white shadow-lg 
+    shadow-emerald-950/40 transition-all 
+    hover:bg-emerald-500 
+    active:scale-95;
+   
+}
+
