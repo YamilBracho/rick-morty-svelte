@@ -24,6 +24,7 @@ export class HttpClient {
             );
         }
 
-        return await response.json() as Promise<T>;
+         const data: T = await response.json();
+        return data;
     }
 };
