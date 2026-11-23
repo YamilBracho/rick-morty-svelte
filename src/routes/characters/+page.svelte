@@ -1,3 +1,10 @@
+<!-- 
+  Pagina que muestra un grid de los personajes
+  El usaurio puede filtrar y moverse entre paginas de personajes
+
+  Yamil Bracho
+  2026-Nov-11 
+-->
 
 <script lang="ts">
   import { onMount } from 'svelte';

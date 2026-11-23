@@ -1,5 +1,9 @@
 /**
- * controla la concurrencia y la frecuencia de las descargas.
+ * controla la concurrencia y la frecuencia de las descargas usando
+ * una cola
+ * 
+ * Yamil Bracho
+ * 2026-Nov-11
  */
 
 type QueueTask<T> = () => Promise<T>;
@@ -25,6 +29,12 @@ export class ImageDownloadQueue {
     this.minInterval = minInterval;
   }
 
+  /**
+   * Ejecuta descarga de la imagen a la cola
+   * @param task 
+   * @param signal 
+   * @returns 
+   */
   execute<T>(task: QueueTask<T>, signal?: AbortSignal): Promise<T> {
     return new Promise<T>((resolve, reject) => {
       if (signal?.aborted) {
@@ -74,6 +84,10 @@ export class ImageDownloadQueue {
     });
   }
 
+  /**
+   * procesa cola de imagenes que estan pendientes para descarga
+   * @returns 
+   */
   private processQueue(): void {
     if (this.activeDownloads >= this.maxConcurrent) return;
     if (this.queue.length === 0) return;

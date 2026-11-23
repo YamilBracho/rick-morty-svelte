@@ -1,5 +1,13 @@
+<!-- 
+  Pagina principal del Catalogo de Rick and Morty
+
+  Yamil Bracho
+  2026-Nov-11 
+-->
 
 <script lang="ts">
+  import rickMortyLogo from '#lib/assets/rick-morty-logo.jpg';
+
   let appTitle: string = 'Rick & Morty Explorer';
 
   function searchCharacters(): void {
@@ -20,7 +28,7 @@
 <div class="home-container">
   <h1>{appTitle}</h1>
 
-  <img src="../lib/assets/rick-morty-logo.jpg" alt="logo" />
+  <img src={rickMortyLogo} alt="logo" />
 
   <p>
     Explore the universe of Rick and Morty
@@ -69,4 +77,12 @@
   button:hover {
     background-color: #15803d;
   }
+
+.home-container img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+
 </style>

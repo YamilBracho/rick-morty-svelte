@@ -3,15 +3,20 @@
  * the signal parameter is sent by tanStack as a Cancellation
  * return Promise<T> or Error
  * add another methods as it will be needed.
- * Author Yamil Bracho
+ * 
+ * Yamil Bracho
  * 2026-Nov-11
  */
 export class HttpClient {
 
     constructor(private readonly baseUrl : string) {
-
     }
 
+    /**
+     * Ejecuta HTTP GET
+     * @param endpoint 
+     * @returns 
+     */
     async get<T>(endpoint: string): Promise<T> {
 
         const response = await fetch(

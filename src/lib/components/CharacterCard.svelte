@@ -1,3 +1,10 @@
+ <!-- 
+   Muestra informacion sobre un personaje
+   El personaje es recibido via $props 
+
+   Yamil Bracho
+   2026-Nov-09
+ -->
 
 <script lang="ts">
   import { onMount } from 'svelte';

@@ -2,8 +2,7 @@
  * Represents a custom types used in this application.
  * Basically they are DTOs.
  * 
- *
- * Author Yamil Bracho
+ * Yamil Bracho
  * 2026-Nov-11
 */
 
